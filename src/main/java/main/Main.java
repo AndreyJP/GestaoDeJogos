@@ -28,5 +28,7 @@ public class Main {
         torneioPrincipal.adicionarJogador(jogador1);
         torneioPrincipal.adicionarJogador(jogador2);
         torneioPrincipal.adicionarJogador(jogador1);
+
+        torneioPrincipal.exibirJogadores();
     }
 }

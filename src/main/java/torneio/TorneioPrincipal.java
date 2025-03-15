@@ -21,4 +21,9 @@ public class TorneioPrincipal {
             System.out.printf("Jogador %s já está no torneio. \n", jogador.getNome());
         }
     }
+
+    public void exibirJogadores(){
+        System.out.println("\n=== Jogadores do Torneio - " + this.nome + " ===");
+        this.jogadores.forEach(jogador -> System.out.println(jogador.getNome()));
+    }
 }
