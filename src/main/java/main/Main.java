@@ -2,6 +2,7 @@ package main;
 
 import jogos.Ranking;
 import model.Jogador;
+import torneio.TorneioPrincipal;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,5 +22,11 @@ public class Main {
         ranking.adicionarJogador(jogador3);
 
         ranking.exibirRanking();
+
+        // Torneio
+        TorneioPrincipal torneioPrincipal = new TorneioPrincipal("Torneio LDS I - 15/03");
+        torneioPrincipal.adicionarJogador(jogador1);
+        torneioPrincipal.adicionarJogador(jogador2);
+        torneioPrincipal.adicionarJogador(jogador1);
     }
 }
