@@ -2,6 +2,8 @@ package main;
 
 import jogos.Ranking;
 import model.Jogador;
+import torneio.Estatistica;
+import torneio.TorneioPrincipal;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,5 +23,24 @@ public class Main {
         ranking.adicionarJogador(jogador3);
 
         ranking.exibirRanking();
+
+        // Torneio
+        TorneioPrincipal torneioPrincipal = new TorneioPrincipal("Torneio LDS I - 15/03");
+        torneioPrincipal.adicionarJogador(jogador1);
+        torneioPrincipal.adicionarJogador(jogador2);
+        torneioPrincipal.adicionarJogador(jogador1);
+
+        torneioPrincipal.exibirJogadores();
+
+        // Estatísticas
+        Estatistica estatistica = new Estatistica(torneioPrincipal);
+        estatistica.registrarPontuacao(jogador1, 100);
+        estatistica.registrarPontuacao(jogador2, 80);
+        estatistica.registrarPontuacao(jogador1, 15);
+        estatistica.registrarPontuacao(jogador3, 75);
+
+        estatistica.exibirPontuacoes();
+        estatistica.exibirVencedorTorneio();
+
     }
 }
