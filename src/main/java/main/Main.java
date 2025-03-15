@@ -40,6 +40,7 @@ public class Main {
         estatistica.registrarPontuacao(jogador3, 75);
 
         estatistica.exibirPontuacoes();
+        estatistica.exibirVencedorTorneio();
 
     }
 }
